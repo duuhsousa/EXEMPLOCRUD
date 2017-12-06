@@ -11,6 +11,7 @@ namespace EXEMPLOCRUD
         SqlCommand comandos;
         SqlDataReader rd;
 
+        //CATEGORIAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         public List<Categoria> ListarCategorias(string titulo){
             List<Categoria> lista = new List<Categoria>();
             try{
@@ -58,7 +59,6 @@ namespace EXEMPLOCRUD
             return lista;
 
         }
-
 
         public List<Categoria> ListarCategorias(int id){
             List<Categoria> lista = new List<Categoria>();
@@ -222,7 +222,51 @@ namespace EXEMPLOCRUD
             return rs;
 
         }
-        
+
+
+        //CLIENTES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        public bool AdicionarClientes(Cliente cliente){
+            bool rs = false;
+            try{
+                cn = new SqlConnection();
+                cn.ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=Papelaria;user id=sa;password=senai@123";
+                cn.Open();
+                comandos = new SqlCommand();
+                comandos.Connection = cn;
+                //PROCEDURE SAO DIFERENTESSSSS
+                comandos.CommandType = CommandType.StoredProcedure;
+                comandos.CommandText = "sp_CadCliente";
+                //DEFINICAO DAS VARIAVEIS!!!!!!!
+                //VARIAVEL 1
+                SqlParameter pnome = new SqlParameter("@nome",SqlDbType.VarChar,50);
+                pnome.Value = cliente.NomeCliente;
+                comandos.Parameters.Add(pnome);
+                //VARIAVEL 2 
+                SqlParameter pemail = new SqlParameter("@email",SqlDbType.VarChar,100);
+                pemail.Value = cliente.Email;
+                comandos.Parameters.Add(pemail);
+                //VARIAVEL 3 
+                SqlParameter pcpf = new SqlParameter("@cpf",SqlDbType.VarChar,20);
+                pcpf.Value = cliente.CPF;
+                comandos.Parameters.Add(pcpf);
+
+                int r = comandos.ExecuteNonQuery();
+
+                if( r > 0 )
+                    rs = true;
+
+                comandos.Parameters.Clear();
+
+            }catch(SqlException se){
+                throw new Exception("Erro ao tentar inserir os dados "+se.Message);
+            }catch(Exception ex){
+                throw new Exception("Erro inesperado "+ex.Message);
+            }finally{
+                cn.Close();
+            }
+            return rs;
+        }
 
     }
 }
