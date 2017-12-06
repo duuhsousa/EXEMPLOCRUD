@@ -1,0 +1,10 @@
+c:\Users\31049529812\backend\EXEMPLOCRUD\bin\Debug\netcoreapp2.0\EXEMPLOCRUD.deps.json
+c:\Users\31049529812\backend\EXEMPLOCRUD\bin\Debug\netcoreapp2.0\EXEMPLOCRUD.runtimeconfig.json
+c:\Users\31049529812\backend\EXEMPLOCRUD\bin\Debug\netcoreapp2.0\EXEMPLOCRUD.runtimeconfig.dev.json
+c:\Users\31049529812\backend\EXEMPLOCRUD\bin\Debug\netcoreapp2.0\EXEMPLOCRUD.dll
+c:\Users\31049529812\backend\EXEMPLOCRUD\bin\Debug\netcoreapp2.0\EXEMPLOCRUD.pdb
+c:\Users\31049529812\backend\EXEMPLOCRUD\obj\Debug\netcoreapp2.0\EXEMPLOCRUD.csproj.CoreCompileInputs.cache
+c:\Users\31049529812\backend\EXEMPLOCRUD\obj\Debug\netcoreapp2.0\EXEMPLOCRUD.AssemblyInfoInputs.cache
+c:\Users\31049529812\backend\EXEMPLOCRUD\obj\Debug\netcoreapp2.0\EXEMPLOCRUD.AssemblyInfo.cs
+c:\Users\31049529812\backend\EXEMPLOCRUD\obj\Debug\netcoreapp2.0\EXEMPLOCRUD.dll
+c:\Users\31049529812\backend\EXEMPLOCRUD\obj\Debug\netcoreapp2.0\EXEMPLOCRUD.pdb

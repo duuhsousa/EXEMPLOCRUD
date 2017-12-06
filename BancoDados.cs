@@ -24,7 +24,7 @@ namespace EXEMPLOCRUD
 
                 comandos.CommandType =  CommandType.Text;
 
-                comandos.CommandText = "select * from categoria where titulo like @vi";
+                comandos.CommandText = "select * from Categorias where titulo like @vi";
                 comandos.Parameters.AddWithValue("@vi",titulo);
 
                 rd = comandos.ExecuteReader();
@@ -73,7 +73,7 @@ namespace EXEMPLOCRUD
 
                 comandos.CommandType =  CommandType.Text;
 
-                comandos.CommandText = "select * from categoria where idcategoria=@vi";
+                comandos.CommandText = "select * from Categorias where idcategoria=@vi";
                 comandos.Parameters.AddWithValue("@vi",id);
 
                 rd = comandos.ExecuteReader();
@@ -123,7 +123,7 @@ namespace EXEMPLOCRUD
                 comandos.CommandType =  CommandType.Text;
 
                 //Preparando o comando de inserção
-                comandos.CommandText = "insert into categoria (titulo) values (@vt)";
+                comandos.CommandText = "insert into Categorias (titulo) values (@vt)";
                 //Passando o título para a variavel de inserção.
                 comandos.Parameters.AddWithValue("@vt",cat.Titulo);
 
@@ -161,7 +161,7 @@ namespace EXEMPLOCRUD
                 comandos.CommandType =  CommandType.Text;
 
                 //Preparando o comando de inserção
-                comandos.CommandText = "update categoria set titulo=@vt where idcategoria=@vi";
+                comandos.CommandText = "update Categorias set titulo=@vt where idcategoria=@vi";
                 //Passando o título para a variavel de inserção.
                 comandos.Parameters.AddWithValue("@vt",cat.Titulo);
                 comandos.Parameters.AddWithValue("@vi",cat.IdCategoria);
@@ -200,7 +200,7 @@ namespace EXEMPLOCRUD
                 comandos.CommandType =  CommandType.Text;
 
                 //Preparando o comando de inserção
-                comandos.CommandText = "delete from categoria where idcategoria=@vi";
+                comandos.CommandText = "delete from Categorias where idcategoria=@vi";
                 //Passando o título para a variavel de inserção.
                 comandos.Parameters.AddWithValue("@vi",cat.IdCategoria);
 
