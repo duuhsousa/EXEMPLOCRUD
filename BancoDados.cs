@@ -108,7 +108,7 @@ namespace EXEMPLOCRUD
 
         }
 
-        public bool Adicionar(Categoria cat){
+        public bool AdicionarCategorias(Categoria cat){
 
             bool rs = false;
             try{
@@ -146,7 +146,7 @@ namespace EXEMPLOCRUD
 
         }
 
-        public bool Atualizar(Categoria cat){
+        public bool AtualizarCategorias(Categoria cat){
 
             bool rs = false;
             try{
@@ -185,7 +185,7 @@ namespace EXEMPLOCRUD
 
         }
 
-        public bool Apagar(Categoria cat){
+        public bool ApagarCategorias(Categoria cat){
 
             bool rs = false;
             try{
